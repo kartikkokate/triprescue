@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+dist/
+.env
+.DS_Store
+.claude/settings.local.json
+backend/app/twin/learner_state.json
+backend/app/monitor/monitor_state.json
+deploy.env
+
+# large local-only source clip (the web copy lives in frontend/public)
+/WhatsApp Video*.mp4
+*.log

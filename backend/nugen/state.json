@@ -1,0 +1,38 @@
+{
+  "dataset_samples": 60,
+  "benchmark_questions": 20,
+  "base_model_id": "llama-v3p2-3b-reasoning",
+  "failed_alignments": [
+    "alignment_01m3fwawft8wkgjf",
+    "alignment_01m3fwssakgdd06j"
+  ],
+  "previous": [
+    {
+      "document_id": "document_01m3fwa89fqa8r88"
+    },
+    {
+      "benchmark_id": "benchmark_01m3fwatscefwj20"
+    },
+    {
+      "alignment_id": "alignment_01m3fwm7negck985"
+    },
+    {
+      "document_id": "document_01m3fwspj3hdzvmg"
+    },
+    {
+      "benchmark_id": "benchmark_01m3fwsr0h2nqcj3"
+    },
+    {
+      "alignment_id": "alignment_01m3g4287jvg5ysq"
+    }
+  ],
+  "dataset_file": "triprescue_train_60.jsonl",
+  "document_id": "document_01m3gp22gxncfnqg",
+  "benchmark_id": "benchmark_01m3gp29d952s16c",
+  "alignment_id": "alignment_01m3gp2amkz7edfn",
+  "model_id": "model_01m3gp7s60wcea0f",
+  "deployment_status": "DEPLOYED",
+  "model_name": "model_triprescue_advisor",
+  "base_model_name": "Llama-V3p2-3b-Reasoning",
+  "evaluation": null
+}

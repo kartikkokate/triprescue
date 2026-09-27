@@ -1,0 +1,195 @@
+{
+  "TR1": [
+    {
+      "title": "Express Cab (next available)",
+      "provider": "GoaCabs Express",
+      "cost": 1200,
+      "duration_minutes": 60,
+      "rating": 78,
+      "notes": "Pickup within 20 min of request",
+      "start_offset_minutes": 20
+    },
+    {
+      "title": "Shared Shuttle",
+      "provider": "GoaShuttle",
+      "cost": 400,
+      "duration_minutes": 90,
+      "rating": 55,
+      "notes": "Cheaper but waits for other passengers",
+      "start_offset_minutes": 30
+    },
+    {
+      "title": "Hotel Pickup Service",
+      "provider": "Taj Vivanta",
+      "cost": 1500,
+      "duration_minutes": 50,
+      "rating": 90,
+      "notes": "Coordinated directly with hotel, most reliable",
+      "start_offset_minutes": 15
+    }
+  ],
+  "HT1": [
+    {
+      "title": "Late Check-in (same hotel)",
+      "provider": "Taj Vivanta",
+      "cost": 0,
+      "duration_minutes": 0,
+      "rating": 95,
+      "notes": "Room held, no extra cost",
+      "start_offset_minutes": 0,
+      "action": "keep"
+    },
+    {
+      "title": "Nearby Alternate Hotel",
+      "provider": "Novotel Candolim",
+      "cost": 10800,
+      "duration_minutes": 0,
+      "rating": 70,
+      "notes": "Two nights at a nearby hotel, same-night booking premium",
+      "start_offset_minutes": 0
+    }
+  ],
+  "AC1": [
+    {
+      "title": "Afternoon Beach Tour (rescheduled)",
+      "provider": "GoaTours",
+      "cost": 0,
+      "duration_minutes": 240,
+      "rating": 80,
+      "notes": "Same tour, later same-day slot",
+      "weather_safe": false,
+      "start_offset_minutes": 300,
+      "action": "reschedule"
+    },
+    {
+      "title": "Next-Day Beach Tour",
+      "provider": "GoaTours",
+      "cost": 200,
+      "duration_minutes": 240,
+      "rating": 75,
+      "notes": "Pushed to following day, small reschedule fee",
+      "weather_safe": false,
+      "next_day": true,
+      "start_offset_minutes": 1440,
+      "action": "reschedule"
+    },
+    {
+      "title": "Indoor Spice Plantation & Museum Tour",
+      "provider": "GoaTours",
+      "cost": 1200,
+      "duration_minutes": 180,
+      "rating": 65,
+      "notes": "Covered indoor alternative, ideal when weather rules out the beach",
+      "weather_safe": true,
+      "start_offset_minutes": 60
+    }
+  ],
+  "AC2": [
+    {
+      "title": "Water Sports (evening slot)",
+      "provider": "GoaTours",
+      "cost": 0,
+      "duration_minutes": 180,
+      "rating": 72,
+      "notes": "Later same-day slot, weather permitting",
+      "weather_safe": false,
+      "start_offset_minutes": 120,
+      "action": "reschedule"
+    },
+    {
+      "title": "Water Sports (next day)",
+      "provider": "GoaTours",
+      "cost": 300,
+      "duration_minutes": 180,
+      "rating": 78,
+      "notes": "Rescheduled to next day morning",
+      "weather_safe": false,
+      "next_day": true,
+      "start_offset_minutes": 1080,
+      "action": "reschedule"
+    },
+    {
+      "title": "Indoor Water Park (covered)",
+      "provider": "GoaTours",
+      "cost": 1500,
+      "duration_minutes": 150,
+      "rating": 60,
+      "notes": "Covered indoor alternative, runs regardless of weather",
+      "weather_safe": true,
+      "start_offset_minutes": 0
+    }
+  ],
+  "TR2": [
+    {
+      "title": "Express Cab (next available)",
+      "provider": "GoaCabs Express",
+      "cost": 1200,
+      "duration_minutes": 45,
+      "rating": 82,
+      "notes": "Faster route to airport",
+      "start_offset_minutes": 0
+    },
+    {
+      "title": "Shared Shuttle",
+      "provider": "GoaShuttle",
+      "cost": 400,
+      "duration_minutes": 75,
+      "rating": 55,
+      "notes": "Cheaper but slower",
+      "start_offset_minutes": 0
+    }
+  ],
+  "FL2": [
+    {
+      "title": "Next IndiGo Flight GOI -> DEL",
+      "provider": "IndiGo",
+      "cost": 1200,
+      "duration_minutes": 120,
+      "rating": 85,
+      "notes": "Same day, 3 hours later",
+      "start_offset_minutes": 180,
+      "action": "reschedule"
+    },
+    {
+      "title": "Vistara GOI -> DEL",
+      "provider": "Vistara",
+      "cost": 5200,
+      "duration_minutes": 120,
+      "rating": 92,
+      "notes": "Different airline, new ticket at today's fare",
+      "start_offset_minutes": 60
+    },
+    {
+      "title": "Next-Day IndiGo Flight",
+      "provider": "IndiGo",
+      "cost": 0,
+      "duration_minutes": 120,
+      "rating": 60,
+      "notes": "Free rebooking but loses a travel day",
+      "next_day": true,
+      "start_offset_minutes": 1440,
+      "action": "reschedule"
+    }
+  ],
+  "FL1": [
+    {
+      "title": "Next IndiGo Flight DEL -> GOI",
+      "provider": "IndiGo",
+      "cost": 1500,
+      "duration_minutes": 120,
+      "rating": 80,
+      "notes": "Same day, later departure",
+      "start_offset_minutes": 180,
+      "action": "reschedule"
+    },
+    {
+      "title": "Vistara DEL -> GOI",
+      "provider": "Vistara",
+      "cost": 5000,
+      "duration_minutes": 130,
+      "rating": 90,
+      "notes": "Different airline, new ticket at today's fare",
+      "start_offset_minutes": 90
+    }
+  ]
+}

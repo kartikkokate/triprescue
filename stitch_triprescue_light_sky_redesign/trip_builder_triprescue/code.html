@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","tertiary-container":"#007f9d","on-surface":"#011d35","surface-variant":"#d1e4ff","on-primary":"#ffffff","secondary-fixed-dim":"#a4c9ff","on-primary-container":"#fdfcff","background":"#f8f9ff","outline-variant":"#c0c7d4","surface-bright":"#f8f9ff","on-surface-variant":"#404752","on-primary-fixed":"#001c37","on-secondary":"#ffffff","primary-fixed-dim":"#a1c9ff","primary-container":"#0077cc","on-secondary-fixed":"#001c39","error":"#ba1a1a","primary":"#005ea3","inverse-on-surface":"#e9f1ff","on-tertiary-container":"#fafdff","inverse-primary":"#a1c9ff","surface":"#f8f9ff","on-secondary-container":"#003c70","on-tertiary-fixed":"#001f28","on-tertiary-fixed-variant":"#004e61","surface-tint":"#0061a7","secondary-fixed":"#d4e3ff","surface-dim":"#c4dcfd","inverse-surface":"#19324b","outline":"#707783","primary-fixed":"#d2e4ff","surface-container":"#e4efff","on-error":"#ffffff","on-secondary-fixed-variant":"#004883","secondary-container":"#64a8fe","on-background":"#011d35","tertiary-fixed":"#b7eaff","surface-container-low":"#eef4ff","tertiary-fixed-dim":"#60d4fb","tertiary":"#00647c","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#00487f","on-error-container":"#93000a","surface-container-highest":"#d1e4ff","secondary":"#0060ac","surface-container-high":"#dbe9ff","error-container":"#ffdad6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","gutter":"1.25rem","margin-mobile":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem","margin":"2rem","space-xl":"2.25rem","gutter-mobile":"0.75rem"},"fontFamily":{"label-lg":["Geist"],"body-sm":["Geist"],"body-md":["Geist"],"body-lg":["Geist"],"label-md":["Geist"],"headline-lg":["Geist"],"headline-lg-mobile":["Geist"],"headline-md":["Geist"],"headline-sm":["Geist"],"display":["Geist"],"data-mono":["Geist"],"label-sm":["Geist"]},"fontSize":{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"600"}],"display":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"data-mono":["13px",{"lineHeight":"18px","letterSpacing":"0","fontWeight":"500"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen antialiased selection:bg-surface-variant selection:text-on-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(16,42,67,0.05)] border-b border-surface-container"><div class="h-16 w-full max-w-[1536px] mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">flight_takeoff</span></div><div class="flex items-center tracking-tight font-headline-sm text-headline-sm select-none"><span class="text-on-surface">Trip</span><span class="text-primary">Rescue</span></div></div><div class="hidden xl:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg border border-surface-container-high cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">connecting_airports</span><span class="font-label-md text-label-md text-on-surface">DEL → BLR → GOA</span><span class="font-label-sm text-label-sm text-on-surface-variant">(Active Monsoon Chain)</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div></div><nav class="hidden lg:flex items-center bg-surface-container-low p-1 rounded-full border border-surface-container" data-active-classes="bg-surface-container-lowest text-on-surface shadow-[0_2px_6px_rgba(16,42,67,0.06)] font-label-md"><a aria-current="page" class="px-space-md py-1.5 rounded-full transition-all bg-surface-container-lowest text-on-surface shadow-[0_2px_6px_rgba(16,42,67,0.06)] font-label-md" data-path="trip-builder" href="#">Trip Builder</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-full transition-all" data-path="recovery-console" href="#">Recovery Console</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-full transition-all" data-path="weather-digital-twin" href="#">Weather Digital Twin</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-full transition-all" data-path="monitoring" href="#">Monitoring</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-1.5 rounded-full transition-all" data-path="ai-model" href="#">AI Model</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden sm:flex items-center gap-1.5 bg-surface-container-lowest px-space-sm py-1 rounded-full border border-surface-container shadow-[0_1px_3px_rgba(16,42,67,0.04)]"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-data-mono text-data-mono text-on-surface-variant">Engine Connected</span></div><button class="relative p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low border border-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute -top-1 -right-1 px-1.5 py-0.2 bg-error text-on-error font-label-sm text-label-sm rounded-full">2</span></button><button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low border border-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 cursor-pointer shadow-[0_1px_3px_rgba(16,42,67,0.04)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- HERO SECTION: Light Sky Visual Language with Commercial Aircraft -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest">
+<!-- Atmospheric Ambient Gradient Background -->
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/90 to-surface-container-low pointer-events-none z-10"></div>
+<div class="absolute -top-24 right-0 w-[55vw] h-[55vw] rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-20 max-w-[1536px] mx-auto px-gutter py-space-xl lg:py-24 flex flex-col lg:flex-row items-center justify-between gap-space-xl min-h-[75vh]">
+<!-- Left Content Column (48% width) -->
+<div class="w-full lg:w-[48%] flex flex-col items-start gap-space-md">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container text-primary shadow-sm">
+<span class="material-symbols-outlined text-[16px] animate-pulse">shield</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">INTELLIGENT TRAVEL RECOVERY</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display text-display text-on-surface tracking-tight leading-[1.15]">
+          When one booking breaks,<br class="hidden sm:inline"/>
+<span class="text-primary">know exactly what to do next.</span>
+</h1>
+<!-- Supporting Narrative -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          See the impact across your entire trip, compare feasible recovery plans, understand weather risk, and stay ahead of cascade disruptions across Indian skies & rails.
+        </p>
+<!-- CTA Actions Bar -->
+<div class="flex flex-wrap items-center gap-space-sm pt-2 w-full sm:w-auto">
+<button class="group flex items-center justify-center gap-2 px-space-lg py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all hover:shadow-lg active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Build my trip</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<a class="flex items-center justify-center gap-2 px-space-lg py-3 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container hover:text-primary transition-all" data-path="recovery-console" href="#">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Open Recovery Console</span>
+</a>
+</div>
+<!-- Trust Anchor -->
+<div class="flex items-center gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>TripRescue never books, cancels, or charges payment on your behalf. Advisory only.</span>
+</div>
+<!-- Micro Stats Bar -->
+<div class="grid grid-cols-3 gap-space-sm w-full pt-space-md border-t-0">
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<div class="font-data-mono text-data-mono text-on-surface-variant">CASCADE BUFFER</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">45 min</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<div class="font-data-mono text-data-mono text-on-surface-variant">AIRPORT METAR</div>
+<div class="font-headline-sm text-headline-sm text-primary flex items-center gap-1">
+<span>DEL 28°C</span>
+<span class="material-symbols-outlined text-[16px]">wb_sunny</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<div class="font-data-mono text-data-mono text-on-surface-variant">RESOLVE RATE</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">99.4%</div>
+</div>
+</div>
+</div>
+<!-- Right Visual Column (52% width) with Provided Aircraft Imagery -->
+<div class="w-full lg:w-[52%] relative flex items-center justify-center">
+<!-- Floating Visual Card Container -->
+<div class="relative w-full aspect-[16/10] max-h-[520px] rounded-3xl overflow-hidden shadow-xl bg-surface-container-low">
+<!-- The Mandatory Uploaded Photograph -->
+<img alt="Commercial airliner cruising smoothly through brilliant sunny azure sky above fluffy cumulus clouds" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDelbACmH7OhGWCsjOlENrOhPbJSd1C86giwle17ovIyqrC8Hl-PFGxbLlqD_LS0zq9AHy70GkSVio3o5QgZdIgioGKpWmEiKRqPrDI5jvYb_vjDlisdytmatLNi7RUCM6mgBmgr6BeOzW2u5ad30quNpANwEJPEZuDF2EK3P3OCIXb2c62ai5gUjNuy_u80XZIWQCL1XTzCSCoyL_t2h3OvnPtQ0cwBpkixo2MbdeDw07SpnIbs1OMoaxYqgCOgPgTbVY"/>
+<!-- Atmospheric Light Scrim Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+<!-- Top-Left Avionics Status Pill -->
+<div class="absolute top-4 left-4 z-20 flex items-center gap-2 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">OCC LIVE CORRIDOR: BOM • DEL • BLR</span>
+</div>
+<!-- Floating Live Operational Summary Overlay Card (Bottom-Right) -->
+<div class="absolute bottom-4 right-4 left-4 sm:left-auto sm:w-[320px] z-20 bg-surface-container-lowest/95 backdrop-blur-xl p-space-md rounded-2xl shadow-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary">LIVE TRIP INTELLIGENCE</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flights • Transfers • Hotels • Weather</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">radar</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-2 bg-surface-container-low p-2 rounded-xl text-center">
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Active</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">6</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Risk</span>
+<span class="font-headline-sm text-headline-sm text-error">18%</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Buffer</span>
+<span class="font-headline-sm text-headline-sm text-primary">45m</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span>Vande Bharat leg monitored</span>
+</span>
+<span class="font-data-mono text-data-mono text-primary font-semibold">STABLE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TRIP BUILDER WORKSPACE & ITINERARY GRAPH -->
+<section class="w-full max-w-[1536px] mx-auto px-gutter py-space-xl">
+<!-- Workspace Header & Filter Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">account_tree</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Connected Multi-Modal Itinerary Chain</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Active Journey: <strong class="text-on-surface">DEL → BLR → MYQ → DEL</strong> • Monsoon Resiliency Buffer Active
+        </p>
+</div>
+<!-- Segment Filter Pills -->
+<div class="flex flex-wrap items-center gap-1.5 p-1 bg-surface-container-low rounded-xl">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm" type="button">
+          All Bookings (6)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+          Flights (2)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+          Trains (1)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+          Transfers (2)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">
+          Hotels (1)
+        </button>
+</div>
+</div>
+<!-- 12-Column Responsive Operational Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Main Work Area: Interactive Itinerary Node Graph (8 Columns) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Graph Canvas Wrapper -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-low px-space-md py-2.5 rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">timeline</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wide">Propagation Sequence & Inter-Segment Transfer Windows</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono text-data-mono text-on-surface-variant">
+<span>Zoom: 100%</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Sync: Real-Time</span>
+</div>
+</div>
+<!-- Vertical Sequence of Cards with Connected Bridges -->
+<div class="relative flex flex-col gap-3">
+<!-- NODE 1: IndiGo Flight 6E-204 -->
+<div class="relative bg-surface-container-low hover:bg-surface-container rounded-2xl p-space-md transition-all shadow-sm group">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">flight</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Flight 6E-204</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">IndiGo • Airbus A321neo</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-data-mono text-data-mono">PNR: K92FXP</span>
+</div>
+<div class="flex items-center gap-3 mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-semibold">DEL</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">06:15 IST (T3)</span>
+<span class="material-symbols-outlined text-[16px] text-primary">east</span>
+<span class="font-semibold">BLR</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">09:05 IST (T1)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col sm:items-end justify-between gap-1">
+<!-- SAFE Pill -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">SAFE • ON TIME</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Gate 42B • Seat 12F</span>
+</div>
+</div>
+</div>
+<!-- Inter-Node Transfer Line 1 -->
+<div class="flex items-center justify-between px-space-xl py-1">
+<div class="flex items-center gap-2 text-primary font-data-mono text-data-mono">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Buffer Window: 45 min airport exit & luggage clearance</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">BOM OCC Cleared</span>
+</div>
+<!-- NODE 2: Cab Transfer BLR Airport -> City -->
+<div class="relative bg-surface-container-low hover:bg-surface-container rounded-2xl p-space-md transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">local_taxi</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Cab Transfer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pre-Booked Airport Express Sedan</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-data-mono text-data-mono">ID: CRN-84729</span>
+</div>
+<div class="flex items-center gap-3 mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-semibold">BLR Airport Zone 2</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">09:50 IST</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">east</span>
+<span class="font-semibold">KSR Bengaluru City Station</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">11:15 IST</span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col sm:items-end justify-between gap-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">SAFE • TRAFFIC NOMINAL</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Hebbal Flyover: Clear</span>
+</div>
+</div>
+</div>
+<!-- Inter-Node Transfer Line 2 (AT RISK CALLOUT) -->
+<div class="flex items-center justify-between px-space-xl py-1 bg-error-container/40 rounded-xl">
+<div class="flex items-center gap-2 text-on-error-container font-data-mono text-data-mono font-semibold">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+<span>Buffer Compressed: Only 18m before platform gate closure</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">DOWNSTREAM STRESS</span>
+</div>
+<!-- NODE 3: Vande Bharat Express (AT RISK NODE) -->
+<div class="relative bg-surface-container-low rounded-2xl p-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">train</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Vande Bharat Express (20607)</span>
+<span class="font-body-sm text-body-sm text-error font-semibold">Late Inbound Rake (+22m)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-data-mono text-data-mono">IRCTC: 482019481</span>
+</div>
+<div class="flex items-center gap-3 mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-semibold">KSR Bengaluru (SBC)</span>
+<span class="font-data-mono text-data-mono text-error font-bold">11:33 IST (Delayed)</span>
+<span class="material-symbols-outlined text-[16px] text-error">east</span>
+<span class="font-semibold">Mysuru Junction (MYS)</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">13:30 IST</span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col sm:items-end justify-between gap-1">
+<!-- AT RISK Pill -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container shadow-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">AT RISK • CASCADE HAZARD</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-error-container font-semibold">Platform 1 • Coach C3-14</span>
+</div>
+</div>
+<!-- Anomaly Banner inside Node -->
+<div class="mt-3 p-2.5 bg-surface-container-lowest rounded-xl flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">report_problem</span>
+<span>Train running 22m late, downstream cab transfer in Mysore Station at risk.</span>
+</span>
+<button class="text-primary font-label-sm text-label-sm hover:underline font-bold" type="button">
+                  View Feasible Reroutes →
+                </button>
+</div>
+</div>
+<!-- Inter-Node Transfer Line 3 -->
+<div class="flex items-center justify-between px-space-xl py-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Buffer Window: 25 min vehicle arrival buffer at Mysore Station</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Driver Assigned</span>
+</div>
+<!-- NODE 4: Cab Transfer Mysore Station -> Resort -->
+<div class="relative bg-surface-container-low hover:bg-surface-container rounded-2xl p-space-md transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">directions_car</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Cab Transfer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mysore Chauffeur Service</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-data-mono text-data-mono">ID: MYS-0092</span>
+</div>
+<div class="flex items-center gap-3 mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-semibold">Mysuru Station</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">13:55 IST</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">east</span>
+<span class="font-semibold">The Windflower Resort</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">14:30 IST</span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col sm:items-end justify-between gap-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container shadow-sm">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">AT RISK • RESCHEDULE REQ</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Driver Notified of Delay</span>
+</div>
+</div>
+</div>
+<!-- Inter-Node Transfer Line 4 -->
+<div class="flex items-center justify-between px-space-xl py-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Buffer Window: Guaranteed check-in preserved until 18:00 IST</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Front Desk Synced</span>
+</div>
+<!-- NODE 5: Hotel Stay Windflower -->
+<div class="relative bg-surface-container-low hover:bg-surface-container rounded-2xl p-space-md transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">hotel</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">The Windflower Resort & Spa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Premium Villa • 2 Nights</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-data-mono text-data-mono">CONF: #WF-8812</span>
+</div>
+<div class="flex items-center gap-3 mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-semibold">Check-in: Today 15:00 IST</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">east</span>
+<span class="font-semibold">Check-out: Nov 16, 11:00 IST</span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col sm:items-end justify-between gap-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">SAFE • CONFIRMED</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Pre-Arrival Verification OK</span>
+</div>
+</div>
+</div>
+<!-- NODE 6: Return Flight Air India AI-505 -->
+<div class="relative bg-surface-container-low hover:bg-surface-container rounded-2xl p-space-md transition-all shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Flight AI-505</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Air India • Boeing 787-8</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-data-mono text-data-mono">PNR: Y24MM8</span>
+</div>
+<div class="flex items-center gap-3 mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-semibold">BLR</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Nov 16, 18:20 IST (T2)</span>
+<span class="material-symbols-outlined text-[16px] text-primary">east</span>
+<span class="font-semibold">DEL</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">21:05 IST (T3)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center sm:flex-col sm:items-end justify-between gap-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">SAFE • NORMAL SCHEDULE</span>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">Aircraft Rotation on Schedule</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Rail (4 Columns): Quick Entry Card & Cascade Disruption Simulator -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Quick-Entry Card: Add Booking / Segment -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm border-b-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">add_box</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Add Booking / Segment</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Manual or PNR</span>
+</div>
+<!-- Modality Tabs -->
+<div class="grid grid-cols-4 gap-1 p-1 bg-surface-container-low rounded-xl my-space-sm">
+<button class="py-1.5 rounded-lg bg-surface-container-lowest font-label-md text-label-md text-primary shadow-sm flex flex-col items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[18px]">flight</span>
+<span class="text-[11px]">Flight</span>
+</button>
+<button class="py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex flex-col items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">train</span>
+<span class="text-[11px]">Train</span>
+</button>
+<button class="py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex flex-col items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+<span class="text-[11px]">Cab</span>
+</button>
+<button class="py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex flex-col items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">hotel</span>
+<span class="text-[11px]">Hotel</span>
+</button>
+</div>
+<!-- Form Fields with 44px Height & Crisp Styling -->
+<form class="flex flex-col gap-3 pt-1" onsubmit="event.preventDefault();">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Carrier / Provider</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="e.g. Air India, Akasa, Vistara" type="text" value="Air India"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Flight / PNR No.</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary uppercase shadow-inner" placeholder="AI-803 or 6 chars" type="text" value="AI-803"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Cabin / Class</label>
+<select class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner">
+<option>Economy Standard</option>
+<option>Premium Economy</option>
+<option>Business Class</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Origin</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="text" value="DEL (Indira Gandhi Int'l)"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Destination</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="text" value="BLR (Kempegowda Int'l)"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Departure (IST)</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-data-mono text-data-mono focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="text" value="14:20"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Arrival (IST)</label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-data-mono text-data-mono focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="text" value="17:05"/>
+</div>
+</div>
+<button class="mt-2 w-full h-11 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow hover:bg-primary-container transition-all active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-[18px]">add_link</span>
+<span>Add to Journey Chain</span>
+</button>
+</form>
+</div>
+<!-- Cascade Disruption Simulator Widget -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">science</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cascade Simulator</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+              Sandbox Mode
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+            Stress-test your itinerary against typical aviation delays, runway bottlenecks, and weather disruptions.
+          </p>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Simulated Delay on Flight 6E-204</span>
+<span class="font-data-mono text-data-mono text-error font-bold">+45 min</span>
+</div>
+<!-- Range slider simulation -->
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg cursor-pointer" max="180" min="0" type="range" value="45"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span>0m (On Time)</span>
+<span>+60m</span>
+<span>+180m (Severe)</span>
+</div>
+</div>
+<!-- Downstream Impact Preview Box -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-error-container text-on-error-container flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px] text-error">dangerous</span>
+<span>Downstream Impact Warning</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container">
+              Vande Bharat connection missed by <strong>12 mins</strong>. Subsequent cab transfer rendered invalid.
+            </p>
+<div class="pt-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-error-container font-semibold">2 viable recovery solutions found</span>
+<span class="material-symbols-outlined text-[16px] text-on-error-container">check_circle</span>
+</div>
+</div>
+<!-- Direct Action Trigger -->
+<button class="mt-space-sm w-full py-3 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm hover:bg-primary transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+<span>Simulate & Check Recoveries</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container py-space-md"><div class="w-full max-w-[1536px] mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="font-semibold text-on-surface">TripRescue Control Avionics</span><span>• OCC Protocol Level 4</span><span>• Node IND-BOM-01</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" href="#">Operations SLA</a><a class="hover:text-on-surface transition-colors" href="#">DGCA Safety Matrix</a><a class="hover:text-on-surface transition-colors" href="#">Network Telemetry</a></div></div></footer></body></html>

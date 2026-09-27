@@ -1,0 +1,27 @@
+# Render Blueprint - backend API (FastAPI). Secrets are set in the Render dashboard (sync: false).
+services:
+  - type: web
+    name: triprescue-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/trip-status
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false   # e.g. https://triprescue.vercel.app
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false   # publishable key only
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: AVIATIONSTACK_API_KEY
+        sync: false
+      - key: NUGEN_API_KEY
+        sync: false
+      - key: NUGEN_MODEL_ID
+        sync: false

@@ -1,0 +1,152 @@
+{
+  "nodes": [
+    {
+      "id": "FL1",
+      "type": "flight",
+      "title": "IndiGo 6E-204 DEL -> GOI",
+      "location": "Goa Airport",
+      "start": "2026-10-10T10:00:00",
+      "end": "2026-10-10T12:00:00",
+      "cost": 4500,
+      "provider": "IndiGo",
+      "cancellation_policy": "partial_50pct",
+      "status": "safe",
+      "lat": 28.5562,
+      "lon": 77.1,
+      "dest_lat": 15.3808,
+      "dest_lon": 73.8314,
+      "service_code": "6E204"
+    },
+    {
+      "id": "TR1",
+      "type": "transfer",
+      "title": "Airport -> Hotel Transfer",
+      "location": "Goa Airport to Candolim",
+      "start": "2026-10-10T12:30:00",
+      "end": "2026-10-10T13:30:00",
+      "cost": 800,
+      "provider": "GoaCabs",
+      "cancellation_policy": "non_refundable",
+      "status": "safe",
+      "lat": 15.3808,
+      "lon": 73.8314,
+      "dest_lat": 15.5049,
+      "dest_lon": 73.7673
+    },
+    {
+      "id": "HT1",
+      "type": "hotel",
+      "title": "Taj Vivanta Goa - Check-in (2 nights booked)",
+      "location": "Candolim",
+      "start": "2026-10-10T14:00:00",
+      "end": "2026-10-10T14:30:00",
+      "cost": 9000,
+      "provider": "Taj Vivanta",
+      "cancellation_policy": "free_24h",
+      "status": "safe",
+      "lat": 15.5049,
+      "lon": 73.7673
+    },
+    {
+      "id": "AC1",
+      "type": "activity",
+      "title": "Beach Hopping Tour",
+      "location": "Candolim",
+      "start": "2026-10-11T09:00:00",
+      "end": "2026-10-11T13:00:00",
+      "cost": 1500,
+      "provider": "GoaTours",
+      "cancellation_policy": "non_refundable",
+      "status": "safe",
+      "weather_sensitive": true,
+      "lat": 15.518,
+      "lon": 73.762
+    },
+    {
+      "id": "AC2",
+      "type": "activity",
+      "title": "Water Sports Session",
+      "location": "Candolim Beach",
+      "start": "2026-10-11T15:00:00",
+      "end": "2026-10-11T18:00:00",
+      "cost": 2000,
+      "provider": "GoaTours",
+      "cancellation_policy": "non_refundable",
+      "status": "safe",
+      "weather_sensitive": true,
+      "lat": 15.516,
+      "lon": 73.761
+    },
+    {
+      "id": "TR2",
+      "type": "transfer",
+      "title": "Hotel -> Airport Transfer",
+      "location": "Candolim to Goa Airport",
+      "start": "2026-10-12T15:00:00",
+      "end": "2026-10-12T16:00:00",
+      "cost": 800,
+      "provider": "GoaCabs",
+      "cancellation_policy": "non_refundable",
+      "status": "safe",
+      "lat": 15.5049,
+      "lon": 73.7673,
+      "dest_lat": 15.3808,
+      "dest_lon": 73.8314
+    },
+    {
+      "id": "FL2",
+      "type": "flight",
+      "title": "IndiGo 6E-205 GOI -> DEL",
+      "location": "Goa Airport",
+      "start": "2026-10-12T18:00:00",
+      "end": "2026-10-12T20:00:00",
+      "cost": 4800,
+      "provider": "IndiGo",
+      "cancellation_policy": "partial_50pct",
+      "status": "safe",
+      "lat": 15.3808,
+      "lon": 73.8314,
+      "dest_lat": 28.5562,
+      "dest_lon": 77.1,
+      "service_code": "6E205"
+    }
+  ],
+  "edges": [
+    {
+      "source": "FL1",
+      "target": "TR1",
+      "type": "transfer_required",
+      "buffer_minutes": 30
+    },
+    {
+      "source": "TR1",
+      "target": "HT1",
+      "type": "checkin_dependency",
+      "buffer_minutes": 15
+    },
+    {
+      "source": "HT1",
+      "target": "AC1",
+      "type": "sequential",
+      "buffer_minutes": 480
+    },
+    {
+      "source": "AC1",
+      "target": "AC2",
+      "type": "same_day",
+      "buffer_minutes": 60
+    },
+    {
+      "source": "AC2",
+      "target": "TR2",
+      "type": "sequential",
+      "buffer_minutes": 720
+    },
+    {
+      "source": "TR2",
+      "target": "FL2",
+      "type": "transfer_required",
+      "buffer_minutes": 60
+    }
+  ]
+}
